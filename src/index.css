@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@media(max-width: 600px){
+
+.navbar{
+  flex-direction: column;
+  align-items: center;
+}
+.card{
+padding: 1 rem 0.5rem;
+
+}
+.footer p{
+   font-size: 14px ;
+}
+.h1{
+  font-size: 20px;
+} 
+.h2{
+  font-size: 24px;
+}
+}

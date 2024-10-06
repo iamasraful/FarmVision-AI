@@ -20,6 +20,7 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '1rem',
+    flexWrap: 'wrap',
     backgroundColor: '#4CAF50',
   },
   logo: {
@@ -30,6 +31,8 @@ const styles = {
     listStyle: 'none',
     display: 'flex',
     gap: '1rem',
+    flexWrap: 'wrap',
+    padding: 0,
     color: 'white',
   },
 };

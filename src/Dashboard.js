@@ -26,6 +26,8 @@ const styles = {
     padding: '1rem',
     margin: '1rem 0',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    borderRadius: '5px',
+    flex: '1 1 300px'
   },
 };
 

@@ -12,13 +12,21 @@ import Footer from './Footer.js';
 
 function App() {
   return (
-    <div className="App">
+    <div style={styles.appContainer}>
      <Navbar/>
      <Dashboard/>
      <Footer/>
     </div>
   );
 }
+const styles ={
+appContainer:{
+  display: 'flex',
+  flexDirection: 'column',
+minHeight: '100vh'
+},
 
+
+};
 export default App;
 

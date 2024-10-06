@@ -13,8 +13,9 @@ const styles = {
     color: 'white',
     textAlign: 'center',
     padding: '1rem',
-    position: 'absolute',
+    position: 'relative',
     bottom: 0,
+    marginTop: '2rem',
     width: '100%',
   },
 };
