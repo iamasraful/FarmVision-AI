@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+// src/App.js
+import './Navbar.js' 
+import './Footer.js'
+import './Dashboard.js' 
+
+import React from 'react';
+// Ensure this line has a variable to capture the imported module
 import './App.css';
+import Navbar from './Navbar.js';
+import Dashboard from './Dashboard.js';
+import Footer from './Footer.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Navbar/>
+     <Dashboard/>
+     <Footer/>
     </div>
   );
 }
 
 export default App;
+
