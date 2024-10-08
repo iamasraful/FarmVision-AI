@@ -5,22 +5,85 @@
   }
   
   .service-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Spacing between grid items */
   }
   
   .service-card {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    position: relative; /* Positioning for pseudo-element */
+    overflow: hidden; /* Prevent overflow of elements */
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .service-card:before {
+    content: ''; /* Pseudo-element for decorative effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(76, 175, 80, 0.1); /* Light green overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Transition for overlay */
+  }
+  
+  .service-card:hover:before {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  .service-card h3 {
+    font-size: 1.25rem; /* Improved heading size */
+    margin-bottom: 10px; /* Space below heading */
+    color: #4CAF50; /* Primary color for headings */
+  }
+  
+  .service-card p {
+    font-size: 0.95rem; /* Standard paragraph size */
+    color: #666; /* Soft text color */
+    margin: 10px 0; /* Spacing around paragraph */
   }
   
   .service-card a {
     color: #4CAF50;
     text-decoration: none;
+    font-weight: bold; /* Make links bold */
+    transition: color 0.3s ease; /* Smooth transition for link color */
+  }
+  
+  .service-card a:hover {
+    color: #388E3C; /* Darker green on hover */
+  }
+  
+  /* Media Query for Responsive Design */
+  @media (max-width: 768px) {
+    .services h2 {
+      font-size: 1.5rem; /* Adjust heading font size */
+    }
+  
+    .service-cards {
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row on small screens */
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .service-cards {
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row on medium screens */
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .service-cards {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid for larger screens */
+    }
   }
   

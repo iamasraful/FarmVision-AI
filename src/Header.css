@@ -1,27 +1,111 @@
+html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
 .header {
-   
+    background-image: url(./image/banner-bg.png);
     background-size: cover;
     color: #fff;
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 0;
+    position: relative;
   }
   
-  .header nav ul {
+.header-content {
+    position: relative;
     display: flex;
-    gap: 20px;
+  flex-direction: column;
+  align-items: center;
   }
-  .header nav ul L
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+#navbar {
+    position: absolute;
+    top: 20px; /* Adjust this value to change how far from the top the navbar appears */
+    right: 20px; /* Adjust this to change how far from the right the navbar appears */
+    display: flex;
+    align-items: center;}
+.header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#navbar  li {
+    list-style:  none;
+    padding:0 10px ;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    padding-right: 50px 10px;
+    padding-top: 20px;
+    font-weight: 100;
+    color: #4CAF50;
+    font-size: 20px;
+    padding: 10px 20px; 
+    font-weight: 500;
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #fff; 
+   /* Rounded corners */
+}
+.header-buttons {
+    margin-top: 20px; /* Adjust if buttons overlap with links */
+  }
+  
   .header-buttons button {
     margin: 10px;
     padding: 10px 20px;
     border: none;
-    background-color: #4CAF50;
-    color: #fff;
+     background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
     cursor: pointer;
   }
-  
+  #navbar li a:hover {
+    background-color: #4CAF50; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+  }
+
+  .header-buttons button:hover {
+    background-color: #45a049;
+  }
   .header-content h1 {
     font-size: 3em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
-  
+  /* Media Queries */
+@media (max-width: 768px) {
+    @media (max-width: 768px) {
+        .header-content h1 {
+          font-size: 1.8em;
+        }
+      
+        .header nav ul {
+          flex-direction: column;
+          gap: 5px;
+        }
+      
+        .header-buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+  }

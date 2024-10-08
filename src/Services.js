@@ -1,6 +1,5 @@
 import React from 'react';
 import './Services.css';
-
 function Services() {
   const services = [
     { title: 'Garden', description: 'Detailed description here.' },
