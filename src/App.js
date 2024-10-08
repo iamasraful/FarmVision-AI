@@ -1,32 +1,34 @@
-// src/App.js
-import './Navbar.js' 
-import './Footer.js'
-import './Dashboard.js' 
+import './Header.css';
+import './Services.css';
+import './About.css';
 
-import React from 'react';
-// Ensure this line has a variable to capture the imported module
-import './App.css';
-import Navbar from './Navbar.js';
-import Dashboard from './Dashboard.js';
+
+import Header from './Header.js';
+import Services from './Services.js';
+import About from './About.js';
+import Testimonials from './Testimonials.js';
 import Footer from './Footer.js';
 
 function App() {
   return (
     <div style={styles.appContainer}>
-     <Navbar/>
-     <Dashboard/>
+      <Header />
+      <Services />
+      <About />
+      <Testimonials />
      <Footer/>
     </div>
   );
 }
-const styles ={
-appContainer:{
-  display: 'flex',
-  flexDirection: 'column',
-minHeight: '100vh'
-},
 
-
+const styles = {
+  appContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+  },
 };
+
 export default App;
+
 

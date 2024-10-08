@@ -1,0 +1,27 @@
+.header {
+   
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .header nav ul {
+    display: flex;
+    gap: 20px;
+  }
+  .header nav ul L
+  .header-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .header-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
