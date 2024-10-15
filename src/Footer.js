@@ -2,7 +2,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer style={styles.footer}>
-      <p>© 2024 AI Agriculture Solutions. All rights reserved.</p>
+      <p>© 2024 FarmVision AI. All rights reserved.</p>
     </footer>
   );
 };
