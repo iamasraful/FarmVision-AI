@@ -12,8 +12,7 @@ function Header() {
     <header className="header">
       <div className="header-content">
         <div className="header-top">
-          <h1>GREEN 
-              SCAPE</h1>
+          <h1>FarmVision AI</h1>
           <button className="hamburger" onClick={toggleNav}>
             {isNavOpen ? '✖' : '☰'}
           </button>
@@ -28,10 +27,6 @@ function Header() {
             <li><a href="#contact" onClick={toggleNav}>Contact Us</a></li>
           </ul>
         </nav>
-        <div className="header-buttons">
-          <button className="read-more">Read More</button>
-          <button className="contact-us">Contact Us</button>
-        </div>
       </div>
     </header>
   );
