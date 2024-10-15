@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = () => {
   return (
     <nav style={styles.navbar}>
-      <h1 style={styles.logo}>AI Agriculture</h1>
+      <h1 style={styles.logo}>Farmvision AI</h1>
       <ul style={styles.navLinks}>
         <li>Dashboard</li>
         <li>Reports</li>

@@ -15,8 +15,10 @@ function Header() {
     <header className="header">
       <div className="header-content">
         <div className="header-top">
-          <h1>FRAM 
-              VISION AI</h1>
+      
+
+          <h1>FarmVision AI</h1>
+
           <button className="hamburger" onClick={toggleNav}>
             {isNavOpen ? '✖' : '☰'}
           </button>
@@ -34,10 +36,13 @@ function Header() {
 
           </ul>
         </nav>
+
         <div className="header-buttons">
         <button onClick={() => navigateTo('/about')} className="read-more">Read More</button>
         <button onClick={() => navigateTo('/contact-page')} className="contact-us">Contact Us</button>
         </div>
+
+
       </div>
     </header>
   );
