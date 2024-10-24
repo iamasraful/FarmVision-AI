@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import "./Services.css";
 function Services() {
   const services = [
@@ -7,7 +7,6 @@ function Services() {
       title: "Garden Making",
       description: "Detailed description here.",
       icon: "fas fa-seedling",
-      link: "/garden",
     },
     {
       title: "Plant Identification",
@@ -62,7 +61,7 @@ function Services() {
             <h3>{service.title}</h3>
             <p>{service.description}</p>
             {service.link ? (
-              <Link to={service.link}>Read More</Link>
+              <h2>Read More</h2>
             ) : (
               <a href="#more">Read More</a>
             )}
