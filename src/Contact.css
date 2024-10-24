@@ -17,6 +17,7 @@
   .contact-header h2 {
     font-size: 1.8em;
     color: #333;
+    margin-right: 20px;
   }
   
   .back-button {
@@ -28,6 +29,7 @@
     transition: background-color 0.3s ease;
     border-radius: 5px;
     font-size: 0.9em;
+    margin-left: 20px;
   }
   
   .back-button:hover {

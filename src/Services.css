@@ -1,89 +1,128 @@
 .services {
-    padding: 50px 20px;
-    background: #f5f5f5;
-    text-align: center;
+  padding: 50px 20px;
+  background: #f5f5f5;
+  text-align: center;
+  position: relative; /* Position relative for background effect */
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.services h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1; /* Ensure text is above background */
+}
+
+.services h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #4caf50;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  z-index: 1; /* Ensure line is above background */
+}
+
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease; /* Added transition for background color */
+  position: relative;
+  overflow: hidden;
+  text-align: center; /* Align text center */
+  z-index: 1; /* Ensure card is above background */
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.03); /* Lift effect with slight scale */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.service-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(76, 175, 80, 0.1);
+  opacity: 0;
+  transition: opacity 0.4s ease; /* Smoother transition for overlay */
+  z-index: 0; /* Set behind the card content */
+}
+
+.service-card:hover:before {
+  opacity: 1; /* Show overlay on hover */
+}
+
+/* Icon styling */
+.service-icon {
+  font-size: 3rem; /* Large icon size */
+  color: #4caf50;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease, color 0.4s ease; /* Smoother transitions */
+}
+
+/* Hover animation for icon */
+.service-card:hover .service-icon {
+  transform: rotate(360deg) scale(1.1); /* Rotate and scale */
+  color: #388e3c;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.service-card a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.4s ease; /* Smoother transition */
+}
+
+.service-card a:hover {
+  color: #388e3c;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .services h2 {
+    font-size: 1.5rem;
   }
-  
+
   .service-cards {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Spacing between grid items */
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .service-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-    position: relative; /* Positioning for pseudo-element */
-    overflow: hidden; /* Prevent overflow of elements */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .service-cards {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .service-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+@media (min-width: 1025px) {
+  .service-cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
-  
-  .service-card:before {
-    content: ''; /* Pseudo-element for decorative effect */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(76, 175, 80, 0.1); /* Light green overlay */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Transition for overlay */
-  }
-  
-  .service-card:hover:before {
-    opacity: 1; /* Show overlay on hover */
-  }
-  
-  .service-card h3 {
-    font-size: 1.25rem; /* Improved heading size */
-    margin-bottom: 10px; /* Space below heading */
-    color: #4CAF50; /* Primary color for headings */
-  }
-  
-  .service-card p {
-    font-size: 0.95rem; /* Standard paragraph size */
-    color: #666; /* Soft text color */
-    margin: 10px 0; /* Spacing around paragraph */
-  }
-  
-  .service-card a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold; /* Make links bold */
-    transition: color 0.3s ease; /* Smooth transition for link color */
-  }
-  
-  .service-card a:hover {
-    color: #388E3C; /* Darker green on hover */
-  }
-  
-  /* Media Query for Responsive Design */
-  @media (max-width: 768px) {
-    .services h2 {
-      font-size: 1.5rem; /* Adjust heading font size */
-    }
-  
-    .service-cards {
-      grid-template-columns: repeat(2, 1fr); /* Two cards per row on small screens */
-    }
-  }
-  
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .service-cards {
-      grid-template-columns: repeat(2, 1fr); /* Two cards per row on medium screens */
-    }
-  }
-  
-  @media (min-width: 1025px) {
-    .service-cards {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid for larger screens */
-    }
-  }
-  
+}
