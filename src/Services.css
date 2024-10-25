@@ -1,24 +1,23 @@
 .services {
-  padding: 50px 20px;
-  background: #f5f5f5;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f5f5f5 50%, #eaeaea 50%);
   text-align: center;
-  position: relative; /* Position relative for background effect */
 }
 
 .service-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); /* Adjusted min-width */
+  gap: 25px; /* Increased spacing between cards */
 }
 
 .services h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
   color: #2c3e50;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px; /* More spacing for a cleaner look */
+  font-weight: 700;
   position: relative;
-  z-index: 1; /* Ensure text is above background */
 }
 
 .services h2::after {
@@ -29,89 +28,100 @@
   background: #4caf50;
   margin: 10px auto 0;
   border-radius: 2px;
-  z-index: 1; /* Ensure line is above background */
 }
-
 .service-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease; /* Added transition for background color */
+  background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Subtle gradient */
+  padding: 30px 20px; /* Increased padding */
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-radius 0.3s ease;
   position: relative;
   overflow: hidden;
-  text-align: center; /* Align text center */
-  z-index: 1; /* Ensure card is above background */
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent; /* Transition border */
 }
 
 .service-card:hover {
-  transform: translateY(-8px) scale(1.03); /* Lift effect with slight scale */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  transform: translateY(-10px) scale(1.05); /* Stronger hover effect */
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
+  border-radius: 20px; /* More rounded on hover */
+  border-color: #4caf50; /* Green border on hover */
 }
 
-.service-card:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(76, 175, 80, 0.1);
-  opacity: 0;
-  transition: opacity 0.4s ease; /* Smoother transition for overlay */
-  z-index: 0; /* Set behind the card content */
-}
-
-.service-card:hover:before {
-  opacity: 1; /* Show overlay on hover */
-}
-
-/* Icon styling */
 .service-icon {
-  font-size: 3rem; /* Large icon size */
+  font-size: 3.5rem; /* Slightly larger icon */
   color: #4caf50;
-  margin-bottom: 15px;
-  transition: transform 0.4s ease, color 0.4s ease; /* Smoother transitions */
+  margin-bottom: 20px; /* Increased margin */
+  transition: transform 0.5s ease, color 0.4s ease;
 }
 
-/* Hover animation for icon */
 .service-card:hover .service-icon {
-  transform: rotate(360deg) scale(1.1); /* Rotate and scale */
+  transform: rotate(360deg) scale(1.2); /* Stronger hover animation */
   color: #388e3c;
 }
 
 .service-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
+  font-size: 1.4rem; /* Increased font size */
+  margin-bottom: 15px;
   color: #4caf50;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .service-card p {
-  font-size: 0.95rem;
-  color: #666;
-  margin: 10px 0;
+  font-size: 1rem; /* Slightly larger text */
+  color: #555;
+  margin: 15px 0;
+  line-height: 1.6;
 }
 
-.service-card a {
+/* Styling the separator line */
+.separator-line {
+  width: 70%;
+  margin: 20px auto;
+  border: 0;
+  height: 2px; /* Slightly thicker line */
+  background: #ddd;
+  transition: width 0.3s ease; /* Animate width on hover */
+}
+
+.service-card:hover .separator-line {
+  width: 90%; /* Increase width on hover */
+}
+
+/* "Read More" text styling */
+.read-more-text {
   color: #4caf50;
-  text-decoration: none;
   font-weight: bold;
-  transition: color 0.4s ease; /* Smoother transition */
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* More spacing */
+  font-size: 1rem; /* Slightly larger */
+  transition: color 0.4s ease, font-size 0.3s ease; /* Smooth transitions */
 }
 
-.service-card a:hover {
+.service-card:hover .read-more-text {
   color: #388e3c;
+  font-size: 1.1rem; /* Increase size on hover */
 }
 
-/* Media Query for Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
   .services h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .service-cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .service-cards {
+    grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
   }
 }
 
@@ -123,6 +133,6 @@
 
 @media (min-width: 1025px) {
   .service-cards {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); /* Adjusted for larger screens */
   }
 }

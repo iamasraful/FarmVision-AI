@@ -13,7 +13,7 @@ function Header() {
     <header className="header">
       <div className="header-content">
         <div className="header-top">  
-        <img src="./image/c.png" alt="FarmVision" className="logo" />
+        <h2>FarmVision</h2>
           <button className="hamburger" onClick={toggleNav}>
             {isNavOpen ? '✖' : '☰'}
           </button>

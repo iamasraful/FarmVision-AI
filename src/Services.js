@@ -1,6 +1,6 @@
 import React from "react";
-
 import "./Services.css";
+import { useNavigate } from "react-router-dom";
 function Services() {
   const services = [
     {
@@ -49,6 +49,26 @@ function Services() {
       icon: "fas fa-cloud-sun",
     },
   ];
+  const navigate = useNavigate();
+  // Function to handle clicking the card
+  const handleCardClick = (serviceTitle) => {
+    navigate(`/services/${serviceTitle}`);
+    // You can add logic here for navigation, showing modal, etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  };
 
   return (
     <section className="services" id="services">
@@ -56,20 +76,22 @@ function Services() {
 
       <div className="service-cards">
         {services.map((service, index) => (
-          <div key={index} className="service-card">
+          <div
+            key={index}
+            className="service-card"
+            onClick={() => handleCardClick(service.title)} // Make card clickable
+          >
             <i className={`${service.icon} service-icon`}></i>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-            {service.link ? (
-              <h2>Read More</h2>
-            ) : (
-              <a href="#more">Read More</a>
-            )}
+            {/* Separator line */}
+            <hr className="separator-line" />
+            {/* "Read More" text */}
+            <p className="read-more-text">read more for click the card</p>
           </div>
         ))}
       </div>
     </section>
   );
 }
-
 export default Services;
