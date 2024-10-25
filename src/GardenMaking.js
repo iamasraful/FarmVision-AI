@@ -1,14 +1,13 @@
+// src/pages/GardenMaking.js
 import React from "react";
-import { useParams } from "react-router-dom";
-function ServiceDetail() {
-  const { title } = useParams(); // Fetch title from URL parameters
+
+function GardenMaking() {
   return (
-    <div>
-      <h1>Service Detail: {title}</h1>
-      {/* Render detailed content based on service title */}
-      <p>This is a more detailed page about {title}.</p>
-      {/* You can add more service details or even fetch data based on title */}
+    <div className="service-detail">
+      <h2>Garden Making Service</h2>
+      <p>Our garden making service provides you with customized garden designs, setup, and maintenance plans to help you create your dream garden.</p>
     </div>
   );
 }
-export default ServiceDetail;
+
+export default GardenMaking;

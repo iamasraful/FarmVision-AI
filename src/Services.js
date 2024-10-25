@@ -52,22 +52,38 @@ function Services() {
   const navigate = useNavigate();
   // Function to handle clicking the card
   const handleCardClick = (serviceTitle) => {
-    navigate(`/services/${serviceTitle}`);
     // You can add logic here for navigation, showing modal, etc.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    switch (serviceTitle) {
+      case "Garden Making":
+        navigate("/services/garden-making");
+        break;
+      case "Plant Identification":
+        navigate("/services/plant-identification");
+        break;
+      case "Plant Disease Identification":
+        navigate("/services/plant-disease-identification");
+        break;
+      case "Planting & Upgrade":
+        navigate("/services/planting-upgrade");
+        break;
+      case "Bonsai Care":
+        navigate("/services/bonsai-care");
+        break;
+      case "Garden Maintenance":
+        navigate("/services/garden-maintenance");
+        break;
+      case "Plant Water":
+        navigate("/services/plant-water");
+        break;
+      case "Plant Cutting":
+        navigate("/services/plant-cutting");
+        break;
+      case "Weather Information":
+        navigate("/services/weather-information");
+        break;
+      default:
+        break;
+    }
   };
 
   return (
