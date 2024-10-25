@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
+import logo from './image/farmvision_logo.png';
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const toggleNav = () => {
@@ -12,8 +13,11 @@ function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <div className="header-top">  
+        <div className="header-top">
+        <div className="logo">
+        <img src={logo} alt="Logo" />
         <h2>FarmVision</h2>
+        </div>
           <button className="hamburger" onClick={toggleNav}>
             {isNavOpen ? '✖' : '☰'}
           </button>
