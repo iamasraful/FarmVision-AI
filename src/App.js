@@ -5,6 +5,7 @@ import "./Testimonials.css";
 import "./Contact.css";
 import "./RegisterLogin.css";
 import "./AdminPage.css";
+import "./Review.css"
 import Header from "./Header.js";
 import Services from "./Services.js";
 import About from "./About.js";
@@ -25,6 +26,7 @@ import PalntWater from "./PlantWater.js";
 import AbouTwo from"./AbouTwo.js"
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Revew from "./Revew.js";
 function App() {
   return (
     <Router>
@@ -81,6 +83,7 @@ function App() {
           <Route path="/contact-page" element={<Contact />} />
           <Route path="/register-login-page" element={<RegisterLogin />} />
           <Route path="/admin-page" element={<AdminPage />} />
+          <Route path="/revew-Page" element={<Revew />} />
         </Routes>
 
         <Footer />

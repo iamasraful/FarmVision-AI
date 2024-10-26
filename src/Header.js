@@ -65,6 +65,11 @@ function Header() {
                 Admin
               </a>
             </li>
+            <li>
+              <a href="#revew" onClick={() => navigateTo("/revew-Page")}>
+                Review
+              </a>
+            </li>
           </ul>
         </nav>
         <div className="header-buttons">
