@@ -6,6 +6,7 @@ import "./Contact.css";
 import "./RegisterLogin.css";
 import "./AdminPage.css";
 import "./Review.css"
+import "./SplashScreen.css"
 import Header from "./Header.js";
 import Services from "./Services.js";
 import About from "./About.js";
@@ -24,10 +25,21 @@ import PlantCutting from "./PlantCutting.js";
 import WeatherInformation from "./WeatherInformation.js";
 import PalntWater from "./PlantWater.js";
 import AbouTwo from"./AbouTwo.js"
-import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import SplashScreen from "./SplashScreen.js";
 import Revew from "./Revew.js";
+import Profile from "./Profile.js";
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <SplashScreen />;
+  }
   return (
     <Router>
       <div style={styles.appContainer}>
@@ -84,6 +96,7 @@ function App() {
           <Route path="/register-login-page" element={<RegisterLogin />} />
           <Route path="/admin-page" element={<AdminPage />} />
           <Route path="/revew-Page" element={<Revew />} />
+          <Route path="/profile-detail" element={<Profile />} />
         </Routes>
 
         <Footer />

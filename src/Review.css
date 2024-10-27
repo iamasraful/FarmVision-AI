@@ -29,15 +29,7 @@
     animation: fadeInDown 1s ease;
   }
   
-.review-content  h2::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 4px;
-    background: #4caf50;
-    margin: 10px auto 0;
-    border-radius: 2px;
-  }
+
   .review-form {
     display: flex;
     flex-direction: column;
@@ -50,6 +42,8 @@
     flex-direction: column;
     align-items: center;
     margin-top: 15px;
+   
+    
   }
   
   .photo-upload input[type="file"] {
@@ -57,6 +51,7 @@
   }
   
   .upload-btn {
+   
     display: inline-block;
     padding: 10px 20px;
     background-color: #4CAF50;

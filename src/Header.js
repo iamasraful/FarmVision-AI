@@ -70,6 +70,11 @@ function Header() {
                 Review
               </a>
             </li>
+            <li>
+              <a href="#profile" onClick={() => navigateTo("/profile-detail")}>
+                Profile
+              </a>
+            </li>
           </ul>
         </nav>
         <div className="header-buttons">
