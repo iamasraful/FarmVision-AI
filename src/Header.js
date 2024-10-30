@@ -40,7 +40,7 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="#about" onClick={() => navigateTo("/about-two")}>
+              <a href="#about" onClick={() => navigateTo("/about-us")}>
                 About
               </a>
             </li>
@@ -78,7 +78,7 @@ function Header() {
           </ul>
         </nav>
         <div className="header-buttons">
-          <button onClick={() => navigateTo("/about-two")} className="read-more">
+          <button onClick={() => navigateTo("/about-us")} className="read-more">
             Read More
           </button>
           <button

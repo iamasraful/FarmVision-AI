@@ -5,9 +5,15 @@ import "./Testimonials.css";
 import "./Contact.css";
 import "./RegisterLogin.css";
 import "./AdminPage.css";
+
 import "./Review.css"
 import "./SplashScreen.css"
 import "./WeatherDashboard.css";
+
+import "./Review.css";
+import "./SplashScreen.css";
+import "./AboutUs.css";
+
 import Header from "./Header.js";
 import Services from "./Services.js";
 import About from "./About.js";
@@ -25,12 +31,12 @@ import BonsaiCare from "./BonsaiCare.js";
 import PlantCutting from "./PlantCutting.js";
 import WeatherInformation from "./WeatherInformation.js";
 import PalntWater from "./PlantWater.js";
-import AbouTwo from"./AbouTwo.js"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import SplashScreen from "./SplashScreen.js";
 import Revew from "./Revew.js";
 import Profile from "./Profile.js";
+import AboutUs from "./AboutUs.js";
 function App() {
   const [loading, setLoading] = useState(!sessionStorage.getItem("splashShown"));
   useEffect(() => {
@@ -66,7 +72,7 @@ function App() {
           />
 
           <Route path="/about" element={<About />} />
-          <Route path="/about-two" element={<AbouTwo />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
 
           <Route path="/services/garden-making" element={<GardenMaking />} />
