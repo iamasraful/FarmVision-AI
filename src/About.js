@@ -17,7 +17,7 @@ function About() {
         </p>
         <div className="read-more">
         <button 
-        onClick={() => navigateTo("/about-two")} className="read-more">
+        onClick={() => navigateTo("/about-us")} className="read-more">
           Read More
         </button>
         </div>
