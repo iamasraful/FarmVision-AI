@@ -7,6 +7,7 @@ import "./RegisterLogin.css";
 import "./AdminPage.css";
 import "./Review.css"
 import "./SplashScreen.css"
+import "./WeatherDashboard.css";
 import Header from "./Header.js";
 import Services from "./Services.js";
 import About from "./About.js";
@@ -31,11 +32,18 @@ import SplashScreen from "./SplashScreen.js";
 import Revew from "./Revew.js";
 import Profile from "./Profile.js";
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!sessionStorage.getItem("splashShown"));
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+    if (loading) {
+      // Set a timer for the splash screen duration
+      const timer = setTimeout(() => {
+        setLoading(false);
+        sessionStorage.setItem("splashShown", "true"); // Set flag in localStorage
+      }, 8000); // Adjust time as needed
+      // Clean up timer on component unmount
+      return () => clearTimeout(timer);
+    }
+  }, [loading]);
 
   if (loading) {
     return <SplashScreen />;

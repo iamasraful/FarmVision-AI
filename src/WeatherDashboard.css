@@ -1,0 +1,155 @@
+/* Main dashboard styling */
+.weather-dashboard {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f4f8 50%, #e0e5ec 50%);
+    color: #333;
+}
+
+/* Location input styling */
+.location-input {
+    margin-bottom: 30px;
+}
+
+.location-input input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    outline: none;
+    width: 200px;
+    transition: border-color 0.3s;
+}
+
+.location-input input:focus {
+    border-color: #4caf50;
+}
+
+.location-input button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.location-input button:hover {
+    background-color: #388e3c;
+}
+
+/* Service cards container */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Service card styling with glassmorphism effect */
+.service-card {
+    background: rgba(255, 255, 255, 0.2); /* Increase transparency */
+    backdrop-filter: blur(15px); /* Increase blur intensity */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Deeper shadow for a lifted effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    color: #333;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Slightly brighter border for contrast */
+    cursor: pointer;
+}
+
+
+/* Hover effect for cards */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling for each service */
+.service-icon {
+    font-size: 3rem;
+    color: #4caf50;
+    margin-bottom: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Icon animation on hover */
+.service-card:hover .service-icon {
+    color: #388e3c;
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Text styling within cards */
+.service-card p {
+    font-size: 1.2rem;
+    margin: 8px 0;
+    color: #555;
+}
+
+.service-card p:last-child {
+    font-size: 1rem;
+    color: #777;
+}
+.daily-updates {
+    margin-top: 40px;
+}
+
+.daily-updates h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #4caf50;
+    text-transform: uppercase;
+}
+checkboxes {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between checkboxes */
+    padding-top: 100px;
+}
+.text1{
+    padding-top: 10px;
+}
+.checkboxes label {
+    display: flex;
+    align-items: center; /* Aligns checkbox with text */
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px; /* Adds padding for better click area */
+    background-color: rgba(0, 0, 0, 0.1); /* Light background for better visibility */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.checkboxes input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+    accent-color: #007bff; /* Custom checkbox color (modern browsers) */
+}
+
+/* Hover effect for labels */
+.checkboxes label:hover {
+    background-color: rgba(0, 123, 255, 0.2); /* Light blue background on hover */
+}
+
+/* Active effect when checkbox is checked */
+.checkboxes input[type="checkbox"]:checked + span {
+    font-weight: bold; /* Make the text bold when checked */
+    color: #007bff; /* Change text color when checked */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+}
