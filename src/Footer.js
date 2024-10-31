@@ -1,8 +1,9 @@
 import React from 'react';
+import "./Footer.css"
 const Footer = () => {
   return (
     <footer style={styles.footer}>
-      <p>© 2024 FarmVision AI. All rights reserved.</p>
+      <p className="Text-Three">© 2024 FarmVision AI. All rights reserved.</p>
     </footer>
   );
 };
@@ -18,6 +19,7 @@ const styles = {
     marginTop: '2rem',
     width: '100%',
   },
+
 };
 
 export default Footer;

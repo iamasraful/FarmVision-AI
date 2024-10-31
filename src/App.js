@@ -5,15 +5,13 @@ import "./Testimonials.css";
 import "./Contact.css";
 import "./RegisterLogin.css";
 import "./AdminPage.css";
-
-import "./Review.css"
-import "./SplashScreen.css"
+import "./Review.css";
+import "./SplashScreen.css";
 import "./WeatherDashboard.css";
-
 import "./Review.css";
 import "./SplashScreen.css";
 import "./AboutUs.css";
-
+import "./Footer.css"
 import Header from "./Header.js";
 import Services from "./Services.js";
 import About from "./About.js";
@@ -38,7 +36,9 @@ import Revew from "./Revew.js";
 import Profile from "./Profile.js";
 import AboutUs from "./AboutUs.js";
 function App() {
-  const [loading, setLoading] = useState(!sessionStorage.getItem("splashShown"));
+  const [loading, setLoading] = useState(
+    !sessionStorage.getItem("splashShown")
+  );
   useEffect(() => {
     if (loading) {
       // Set a timer for the splash screen duration
@@ -93,17 +93,11 @@ function App() {
             path="/services/garden-maintenance"
             element={<GardenMaintainence />}
           />
-           <Route
-            path="/services/plant-water"
-            element={<PalntWater/>}
-          />
-           <Route
-            path="/services/plant-cutting"
-            element={<PlantCutting/>}
-          />
-           <Route
+          <Route path="/services/plant-water" element={<PalntWater />} />
+          <Route path="/services/plant-cutting" element={<PlantCutting />} />
+          <Route
             path="/services/weather-information"
-            element={<WeatherInformation/>}
+            element={<WeatherInformation />}
           />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact-page" element={<Contact />} />

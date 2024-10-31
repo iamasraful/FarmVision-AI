@@ -1,124 +1,197 @@
-/* Background for the About Us section */
-.about-container {
-  display: flex;
-  flex-direction: row; /* Horizontal alignment */
-  justify-content: space-around; /* Distribute space between items */
-  align-items: center; /* Align items vertically */
-  padding: 40px;
-  background-image: url('https://images.unsplash.com/photo-1707209856552-33f3f84b0daf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-size: cover; /* Make sure the image covers the entire background */
-  background-position: center;
-  position: relative; /* Positioning for overlay */
-  color: white;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+/* Page Background */
+.aboutus-page {
+  background: linear-gradient(135deg, #f9f9f9 60%, #f0f0f0 40%); /* Softer gradient */
+  font-family: Arial, sans-serif;
+  color: #2c3e50;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  padding: 3rem 1rem;
 }
 
-/* Optional background color overlay for better text readability */
-.about-container::before {
-  content: '';
+/* Animated Background Overlay */
+.animated-background {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay (black) */
-  z-index: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(44, 62, 80, 0.1), transparent);
+  animation: moveBackground 20s linear infinite;
+  z-index: -1;
 }
 
-/* Ensures the content is above the background image */
-.about-container > * {
-  position: relative;
-  z-index: 1;
+@keyframes moveBackground {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(60px, 60px); }
+  100% { transform: translate(-120px, -120px); }
 }
 
-/* Glass effect for profile cards */
-.profile-card.glass {
-  background-color: rgba(255, 255, 255, 0.15); /* Slight transparency */
-  border-radius: 15px;
-  padding: 20px;
-  width: 300px;
-  margin: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+/* Particle Overlay with subtle animations */
+.particle-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(44, 62, 80, 0.1), transparent);
+  opacity: 0.05;
+  z-index: -1;
+  animation: particleMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes particleMove {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* About Content Section */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
   text-align: center;
-  color: white;
-  transition: transform 0.3s ease;
-  flex: 1; /* Allows flexible resizing */
+  padding: 2rem;
+  margin: auto;
 }
 
-.profile-card.glass:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+/* Profile Card */
+.profile-card {
+  width: 260px;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8); /* Lighter glass effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  color: #2c3e50;
+  text-align: center;
+  position: relative;
 }
 
-/* Profile image */
+.profile-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Image Styling with animation */
 .profile-img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
-/* Headings inside profile cards */
-.profile-card h2 {
-  color: white; /* White headings */
-  margin-bottom: 5px;
-  font-size: 1.7rem;
+.profile-card:hover .profile-img {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-.profile-card p {
-  color: #48b84d; /* Green for the role text */
-  font-size: 1.2rem;
+/* Text Styling */
+h2 {
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
+  transition: color 0.3s;
 }
 
-/* Social media icons */
+p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Social Icons with hover effect */
 .social-icons a {
-  color: white;
-  margin: 0 15px;
+  color: #555;
   font-size: 1.3rem;
-  transition: color 0.3s ease;
+  margin: 0 0.4rem;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .social-icons a:hover {
-  color: #48b84d; /* Green on hover */
+  color: #4caf50;
+  transform: scale(1.2);
 }
 
-/* Email button */
-.profile-card button {
-  background-color: #48b84d; /* Green button background */
-  color: white;
+/* Button Styling */
+.email-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #4caf50, #3a9e40);
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 8px;
+  color: #fff;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: background 0.4s, transform 0.3s;
 }
 
-.profile-card button:hover {
-  background-color: #3a9c3f; /* Darker green on hover */
+.email-button:hover {
+  background: linear-gradient(135deg, #3a9e40, #4caf50);
+  transform: translateY(-3px);
 }
 
-/* Text section */
+/* About Text Section */
 .about-text {
-  max-width: 800px;
-  text-align: left; /* Align text to the left */
-  margin: 0 40px; /* Margin for spacing between elements */
-  color: white; /* White text for the description */
-  flex: 1; /* Allows flexible resizing */
-  text-align: center;
+  max-width: 650px;
+  margin: 1.5rem auto;
 }
 
 .about-text h1 {
-  color: white; /* White heading */
-  margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
 }
 
 .about-text p {
-  color: #d9d9d9; /* Light gray for description text */
+  color: #444;
+  line-height: 1.8;
   font-size: 1rem;
-  line-height: 2;
+  margin-bottom: 1rem;
 }
 
-button{
-  margin-top: 2rem;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .profile-card {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Animation for subtle pop effect on hover */
+.profile-card:hover h2 {
+  color: #4caf50;
+  animation: textPop 0.4s ease;
+}
+
+@keyframes textPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

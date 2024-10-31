@@ -109,15 +109,16 @@ nav {
 
 .header-buttons button {
   margin: 10px;
-  padding: 12px 25px;
+  padding: 12px 28px;
   border: none;
-  background-color: #4caf50;
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   font-size: 16px;
-  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 #navbar li a:hover {
@@ -127,8 +128,9 @@ nav {
 }
 
 .header-buttons button:hover {
-  background-color: #45a049;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #76b852, #8dc26f);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
 .header-content h1 {

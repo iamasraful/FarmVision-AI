@@ -133,7 +133,7 @@ function WeatherInformation() {
 
     return (
         <div className="weather-dashboard">
-            <h2>Weather Dashboard</h2>
+            <h2 className="weather-text">Weather Dashboard</h2>
             <div className="location-input">
                 <input 
                     type="text" 
@@ -168,7 +168,7 @@ function WeatherInformation() {
 
             {/* Checkbox Section for Data Selection */}
             <div className="checkboxes">
-                <h3 className="text1">Select Data to Display:</h3>
+                <h3 className="text1">Select Data to Display</h3>
                 <label>
                     <input 
                         type="checkbox" 
