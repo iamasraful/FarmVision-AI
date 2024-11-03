@@ -140,3 +140,37 @@
     font-size: 1em;
   }
 }
+.image-preview {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-preview img {
+  max-width: 100%; /* Makes image responsive */
+  height: auto;
+  max-height: 150px; /* Restricts maximum height */
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .register-login-page {
+    padding: 10px;
+  }
+
+  .form-group input,
+  .submit-button {
+    font-size: 14px;
+  }
+
+  .tab-header button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .image-preview img {
+    max-height: 100px; /* Adjusts image size for small screens */
+  }
+}

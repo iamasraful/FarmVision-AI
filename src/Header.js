@@ -49,7 +49,7 @@ function Header() {
                 href="#contact-page"
                 onClick={() => navigateTo("/contact-page")}
               >
-                Contact Us
+                ContactUs
               </a>
             </li>
             <li>
@@ -57,7 +57,7 @@ function Header() {
                 href="#register-login-page"
                 onClick={() => navigateTo("/register-login-page")}
               >
-                Login / Register{" "}
+                Login/Register{" "}
               </a>
             </li>
             <li>
@@ -73,6 +73,11 @@ function Header() {
             <li>
               <a href="#profile" onClick={() => navigateTo("/profile-detail")}>
                 Profile
+              </a>
+            </li>
+            <li>
+              <a href="#Admin-d" onClick={() => navigateTo("/admin-dashboard")}>
+                Admin DashBoard
               </a>
             </li>
           </ul>

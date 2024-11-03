@@ -2,14 +2,28 @@ import React, { useState } from 'react';
 import './RegisterLogin.css';
 
 function RegisterLogin() {
+  // State to manage active tab
   const [activeTab, setActiveTab] = useState('login');
 
+  // State to manage uploaded image file
+  const [image, setImage] = useState(null);
+
+  // Function to switch between tabs
   const switchTab = (tab) => {
     setActiveTab(tab);
   };
 
+  // Function to handle image upload and preview
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setImage(URL.createObjectURL(file)); // Creates a preview URL for the uploaded image
+    }
+  };
+
   return (
     <div className="register-login-page">
+      {/* Tab header with Login and Register buttons */}
       <div className="tab-header">
         <button
           className={activeTab === 'login' ? 'active' : ''}
@@ -23,9 +37,9 @@ function RegisterLogin() {
         >
           Register
         </button>
-       
       </div>
 
+      {/* Tab content for Login and Register forms */}
       <div className="tab-content">
         {activeTab === 'login' && (
           <div className="login-form">
@@ -77,6 +91,28 @@ function RegisterLogin() {
               <label>Password</label>
               <input type="password" placeholder="Enter Password" />
             </div>
+            <div className="form-group">
+          <label htmlFor="role">Select  Gender</label>
+          <select id="role" name="role" required>
+            <option value="manager">Male</option>
+            <option value="editor">Female</option>
+            <option value="viewer">Transgender</option>
+          </select>
+        </div>
+
+            {/* Image Upload Section */}
+            <div className="form-group">
+              <label>Profile Image</label>
+              <input type="file" onChange={handleImageUpload} />
+            </div>
+
+            {/* Preview of the uploaded image */}
+            {image && (
+              <div className="image-preview">
+                <img src={image} alt="Profile Preview" />
+              </div>
+            )}
+
             <button className="submit-button">Register</button>
           </div>
         )}

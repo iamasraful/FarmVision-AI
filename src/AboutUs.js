@@ -32,7 +32,7 @@ const AboutUs = () => {
         </div>
 
         <div className="about-text">
-          <h1>About Us</h1>
+          <h1 className=" about-us-text ">About Us</h1>
           <p>
             We are tech-savvy individuals with a passion for Software
             Development, currently working on many projects. We are passionate

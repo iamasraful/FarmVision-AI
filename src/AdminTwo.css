@@ -1,0 +1,367 @@
+/* Base Styles */
+.admin-dashboard {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f5f5 50%, #eaeaea 50%);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.gender-icons p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Dashboard Heading */
+.admin-dashboard h2 {
+    font-size: 2.5rem;
+    color: #000000fc;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease both;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.admin-dashboard h2::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: #4caf50;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Section Headings */
+.Admin-text-one {
+    text-transform: uppercase;
+    color: #000000fc;
+    margin-bottom: 15px;
+}
+
+.Admin-text-one::after {
+    content: " ";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: #4caf50;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Chart Section */
+.chart-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    margin-bottom: 30px;
+    perspective: 1000px;
+}
+.chart-section, .user-management {
+    margin-bottom: 20px;
+  }
+.bar-chart, .doughnut-chart {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease both;
+}
+
+.bar-chart:hover, .doughnut-chart:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Cards Layout */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease both;
+}
+
+/* User Management Table */
+.user-management {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease both;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+
+}
+
+.user-management table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow for table */
+}
+
+.user-management th, .user-management td {
+    padding: 12px 15px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #dddddd; /* Separator lines */
+}
+
+.user-management th {
+    background-color: #4caf50;
+    color: white;
+}
+
+.user-management td {
+    background-color: #f9f9f9;
+}
+
+.user-management tr:hover td {
+    background-color: white;
+    color: #4caf50;
+}
+
+/* Buttons */
+.Button-main-two,
+.Button-main-two {
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #4caf50, #3b8f3b);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    margin-right: 10px; /* Adds space between buttons */
+}
+.Button-main-two:last-child {
+    margin-right: 0; /* Remove margin on the last button to avoid extra spacing */
+}
+.user-management .Button-main-two:hover,
+.Button-main-two:hover {
+    background: linear-gradient(135deg, #66bb6a, #4caf50);
+    color: #000000ef;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button-main{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+
+.logout-button-main:hover {
+    background-color: #d32f2f;
+}
+/* Responsive Table Container */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+
+.table-responsive table {
+    min-width: 600px; /* Set a minimum width for the table */
+}
+/*Traffic Section */
+.traffic-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .traffic-card {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .traffic-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .traffic-section h3 {
+    margin: 0;
+    padding-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  /* Barchart Section */
+.service-requests-section{
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-request-section-two{
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;}
+    .service-request-section-two:hover{
+        transform: translateY(-10px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-requests-section h3 {
+        margin: 0;
+        padding-bottom: 15px;
+        color: #333;
+        font-weight: bold;
+      }
+    
+  .bar-chart, .doughnut-chart {
+    margin: 15px;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+  /* Service  Management Table*/
+  .service-management{
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease both;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  .service-management table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow for table */
+}
+.service-management  th,  .service-management  td {
+    padding: 12px 15px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #dddddd; /* Separator lines */
+}
+
+.service-management th {
+    background-color: #4caf50;
+    color: white;
+}
+
+.service-management td {
+    background-color: #f9f9f9;
+}
+
+.service-management tr:hover td {
+    background-color: white;
+    color: #4caf50;
+}
+.table-responsive-two {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+
+.table-responsive-two table {
+    min-width: 600px; /* Set a minimum width for the table */
+}
+
+
+.Button-main-three,
+.Button-main-three {
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #4caf50, #3b8f3b);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    margin-right: 10px; /* Adds space between buttons */
+}
+.Button-main-three:last-child {
+    margin-right: 0; /* Remove margin on the last button to avoid extra spacing */
+}
+.service-management .Button-main-three:hover,
+.Button-main-three:hover {
+    background: linear-gradient(135deg, #66bb6a, #4caf50);
+    color: #000000ef;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chart-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bar-chart, .doughnut-chart, .user-management {
+        width: 100%;
+    }
+
+    .admin-dashboard h2 {
+        font-size: 2rem;
+    }
+}
+.chart-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .chart-container {
+      padding: 10px;
+    }
+  }

@@ -58,7 +58,7 @@
 
 .service-card:hover .service-icon {
   transform: rotate(360deg) scale(1.2); /* Stronger hover animation */
-  color: #388e3c;
+  color: #1ccf25;
 }
 
 .service-card h3 {

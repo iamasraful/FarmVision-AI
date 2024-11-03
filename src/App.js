@@ -12,6 +12,7 @@ import "./Review.css";
 import "./SplashScreen.css";
 import "./AboutUs.css";
 import "./Footer.css"
+import "./AdminTwo.css"
 import Header from "./Header.js";
 import Services from "./Services.js";
 import About from "./About.js";
@@ -35,6 +36,7 @@ import SplashScreen from "./SplashScreen.js";
 import Revew from "./Revew.js";
 import Profile from "./Profile.js";
 import AboutUs from "./AboutUs.js";
+import AdminTwo from "./AdminTwo.js";
 function App() {
   const [loading, setLoading] = useState(
     !sessionStorage.getItem("splashShown")
@@ -105,6 +107,7 @@ function App() {
           <Route path="/admin-page" element={<AdminPage />} />
           <Route path="/revew-Page" element={<Revew />} />
           <Route path="/profile-detail" element={<Profile />} />
+          <Route path="/admin-dashboard" element={<AdminTwo />} />
         </Routes>
 
         <Footer />
