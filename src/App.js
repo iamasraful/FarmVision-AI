@@ -47,7 +47,7 @@ function App() {
       const timer = setTimeout(() => {
         setLoading(false);
         sessionStorage.setItem("splashShown", "true"); // Set flag in localStorage
-      }, 8000); // Adjust time as needed
+      }, 4000); // Adjust time as needed
       // Clean up timer on component unmount
       return () => clearTimeout(timer);
     }
