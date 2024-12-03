@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
+
 import './css/RegisterLogin.css';
-=======
-import './RegisterLogin.css';
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
 
 function RegisterLogin() {
   // State to manage active tab
@@ -61,10 +58,9 @@ function RegisterLogin() {
               <input type="password" placeholder="Enter Password" />
             </div>
             <button className="submit-button">Login</button>
-<<<<<<< HEAD
+
             <button className="submit-buttonTwo">Reset Your Password</button>
-=======
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
           </div>
         )}
 
@@ -100,13 +96,12 @@ function RegisterLogin() {
               <input type="password" placeholder="Enter Password" />
             </div>
             <div className="form-group">
-<<<<<<< HEAD
+
               <label> Confirm Password</label>
               <input type="password" placeholder="Enter Password" />
             </div>
             <div className="form-group">
-=======
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
           <label htmlFor="role">Select  Gender</label>
           <select id="role" name="role" required>
             <option value="manager">Male</option>

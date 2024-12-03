@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
+
 import "./css/Review.css";
-=======
-import "./Review.css";
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
 
 function Revew() {
   const [photo, setPhoto] = useState(null);

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
+
 import "./css/ProfileSection.css";
-=======
-import "./ProfileSection.css";
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
 import defaultProfile from "./image/default-profile.png"; // Placeholder image
 
 function Profile() {

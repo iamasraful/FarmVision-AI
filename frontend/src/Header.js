@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useEffect, useState , useRef} from "react";
 import "./css/Header.css";
 import logo from "./image/farmvision_logo.png";
@@ -36,21 +36,6 @@ function Header() {
     document.removeEventListener("click", handleOutsideClick);
   };
 },[isNavOpen]);
-
-=======
-import React, { useState } from "react";
-import "./Header.css";
-import logo from "./image/farmvision_logo.png";
-function Header() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
-  const navigateTo = (path) => {
-    window.location.href = path;
-    toggleNav();
-  };
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
   return (
     <header className="header">
       <div className="header-content">
@@ -76,11 +61,9 @@ function Header() {
               </a>
             </li>
             <li>
-<<<<<<< HEAD
+
               <a href="#clients" className="Clients" onClick={() => navigateTo("/testimonials")}>
-=======
-              <a href="#clients" onClick={() => navigateTo("/testimonials")}>
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
                 Clients
               </a>
             </li>
@@ -107,11 +90,9 @@ function Header() {
             </li>
             <li>
               <a href="#about" onClick={() => navigateTo("/admin-page")}>
-<<<<<<< HEAD
+
                 AdminLogin
-=======
-                Admin
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
               </a>
             </li>
             <li>
@@ -126,7 +107,7 @@ function Header() {
             </li>
             <li>
               <a href="#Admin-d" onClick={() => navigateTo("/admin-dashboard")}>
-<<<<<<< HEAD
+
                 Admin/DashBoard
               </a>
             </li>
@@ -139,19 +120,7 @@ function Header() {
           </button>
           <button
             onClick={() => navigateTo("/contact-page",false)}
-=======
-                Admin DashBoard
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div className="header-buttons">
-          <button onClick={() => navigateTo("/about-us")} className="read-more">
-            Read More
-          </button>
-          <button
-            onClick={() => navigateTo("/contact-page")}
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
             className="contact-us"
           >
             Contact Us

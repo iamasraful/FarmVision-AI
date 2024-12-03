@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
-<<<<<<< HEAD
+
 import defaultProfile from "./image/default-profile.png"; // Placeholder image
-=======
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
 import {
   Chart,
   CategoryScale,
@@ -15,17 +14,16 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-<<<<<<< HEAD
+
 import "./css/AdminTwo.css";
 import { FaMale, FaFemale } from "react-icons/fa";
 const dummyImages = [
   defaultProfile , defaultProfile , defaultProfile 
 ];
-=======
-import "./AdminTwo.css";
-import { FaMale, FaFemale } from "react-icons/fa";
 
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
+
+
 // Register components with Chart.js
 Chart.register(
   CategoryScale,
@@ -47,11 +45,10 @@ const initialServices = [
 
 function AdminTwo() {
   const [activeUsers, setActiveUsers] = useState(120);
-<<<<<<< HEAD
+
   const [searchQuery, setSearchQuery] = useState("");
   const [searchField, setSearchField] = useState("name");
-=======
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
   const [userData, setUserData] = useState([
     {
       id: 1,
@@ -60,16 +57,12 @@ function AdminTwo() {
       review: "Great app!",
       reviewApproved: true,
       gender: "male",
-<<<<<<< HEAD
-      reviewApproved: true,
-      gender: "male",
       district: "Burdwan",
       phone: "1234567890",
       dob: "1990-01-01",
     
       image: dummyImages[0],
-=======
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
     },
     {
       id: 2,
@@ -78,7 +71,7 @@ function AdminTwo() {
       review: "Needs improvement.",
       reviewApproved: false,
       gender: "female",
-<<<<<<< HEAD
+
       district: "Kolkata",
       phone: "9876543210",
       dob: "1992-05-12",
@@ -112,12 +105,10 @@ function AdminTwo() {
       alert(`Password for User ${id} set to: ${newPassword}`);
     }
   };
-=======
-    },
-  ]);
-  const [services, setServices] = useState(initialServices);
 
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+    
+
+
   const toggleServiceStatus = (id) => {
     setServices(
       services.map((service) =>
@@ -130,7 +121,7 @@ function AdminTwo() {
   const femaleUsers = userData.filter((user) => user.gender === "female")
     .length;
 
-<<<<<<< HEAD
+
 
     const updateUserPassword = (id) => {
       const newPassword = prompt("Enter new password:");
@@ -146,8 +137,7 @@ function AdminTwo() {
       }
     };
     
-=======
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
   const serviceRequestData = {
     labels: services.map((service) => service.name),
     datasets: [
@@ -355,7 +345,7 @@ function AdminTwo() {
         </div>
       </div>
 
-<<<<<<< HEAD
+
        {/* Search Section */}
        <div className="search-section">
         <h3>Search Users</h3>
@@ -400,8 +390,8 @@ function AdminTwo() {
         </div>
       </div>
     
-=======
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
+
       <button className="logout-button-main" onClick={handleLogout}>
         Logout
       </button>

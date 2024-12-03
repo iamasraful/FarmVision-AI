@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import Webcam from "react-webcam";
 import { FaCamera, FaUpload } from "react-icons/fa"; // Import icons
-<<<<<<< HEAD
 import "./css/DiseaseIdentification.css";
-=======
-import "./DiseaseIdentification.css";
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
 
 function DiseaseIdentification() {
   const [report, setReport] = useState(null);
@@ -14,14 +10,12 @@ function DiseaseIdentification() {
   const [loading, setLoading] = useState(false);
 
   const webcamRef = React.useRef(null);
-<<<<<<< HEAD
-  //Bck Button To Home Page .
+
+  // Back button to home page
   const goBack = () => {
     window.location.href = "/#home"; // Adjust the path if needed for your home section or page
   };
-=======
 
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
   // Handle image upload from file input
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -39,6 +33,7 @@ function DiseaseIdentification() {
     setCameraActive(false);
     simulateProcessing(imageSrc);
   };
+
   const simulateProcessing = (image) => {
     setLoading(true);
     setTimeout(() => {
@@ -54,7 +49,6 @@ function DiseaseIdentification() {
   return (
     <div className="back-side">
       <div className="plant-identification">
-<<<<<<< HEAD
         <button className="back-buttonThree" onClick={goBack}>
           ← Back to Home
         </button>
@@ -63,10 +57,6 @@ function DiseaseIdentification() {
           Identify The Diseases Of Plant Around You With just a Capture Or
           Upload!
         </p>
-=======
-        <h2>🐞 Disease Identification Service</h2>
-        <p>Identify diseases around you with just a capture or upload!</p>
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
 
         <div className="buttons-container">
           <label htmlFor="imageUpload" className="identify-button">
@@ -96,11 +86,7 @@ function DiseaseIdentification() {
               ref={webcamRef}
               screenshotFormat="image/jpeg"
               className="webcam"
-<<<<<<< HEAD
               videoConstraints={{ facingMode: "environment" }} // Use back camera
-=======
-              videoConstraints={{ facingMode: "user" }}
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
             />
             <button className="capture-button" onClick={captureImage}>
               Capture Photo

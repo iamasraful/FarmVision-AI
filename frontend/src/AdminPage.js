@@ -1,9 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
+
 import "./css/AdminPage.css"; // Import the CSS file
-=======
-import "./AdminPage.css"; // Import the CSS file
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
 
 const AdminPage = () => {
   const handleSubmit = (event) => {

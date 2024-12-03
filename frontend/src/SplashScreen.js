@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-<<<<<<< HEAD
+
 import "./css/SplashScreen.css";
-=======
-import "./SplashScreen.css";
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
+
 import logo from "./image/farmvision_logo.png";
 
 function SplashScreen() {

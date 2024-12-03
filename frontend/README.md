@@ -78,16 +78,16 @@ cd fram-vision-ai
 ** Show This **
     step:-3
 
-    D:\FramVisionAi\fram-vision-ai>cd Backend
+    D:\FramVisionAi\fram-vision-ai> cd  Backend
     
     step:-4
 
-    D:\FramVisionAi\fram-vision-ai\Backend> env\Scripts\activate (Enter)    ( For  My Case vnb is 'env'  )
+     D:\FramVisionAi\fram-vision-ai\Backend> env\Scripts\activate (Enter)    ( For  My Case vnb is 'env'  )
     
     step:-5
 
    
-    (env) D:\FramVisionAi\fram-vision-ai\Backend>pip  freeze (Enter)   
+    (env) D:\FramVisionAi\fram-vision-ai\Backend> pip  freeze (Enter)   
     
     asgiref==3.8.1
     Django==5.1.3
@@ -103,7 +103,7 @@ cd fram-vision-ai
 5. **Create a superuser (optional)**:
    python manage.py createsuperuser
 6. **Start the Django development server**:
-   (env) D:\FramVisionAi\fram-vision-ai\Backend>python manage.py runserver (Enter)
+   (env) D:\FramVisionAi\fram-vision-ai\Backend> python  manage.py  runserver (Enter)
    The backend server will now be running on `http://127.0.0.1:8000`.
 7. **How To Run This React On Your Mobile Phone**
     Go the Terminal Section And Select Ports, Then Select The Forward Port and Enter The Port No
@@ -149,12 +149,3 @@ We welcome contributions to Fram-Vision AI! Here are some ways you can help:
 -**Update 12(28.11.2024)** :  Today I  Add  Reset Password Button On Login/Register Page .:
 
 ---
-"# FramVisionAi" 
-=======
-Hii I am Sayan Majumder , Today I will Make The Ui Part Of This Project.
-2 nd update  Responsive .
-3rd update Today 8.01.2024 . I Update The old Ui. 
-4th update 7.17 changes of ui.
-Today Date Is 9.10.2024 . Now I Push New Ui.
-Today Date Is 24.10.2024 . I made some changes on ui interface . 
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd

@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import Webcam from "react-webcam";
 import { FaCamera, FaUpload } from "react-icons/fa"; // Import icons
-<<<<<<< HEAD
+
 import "./css/PlantIdentification.css";
-=======
-import "./PlantIdentification.css";
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
 
 function PlantIdentification() {
   const [report, setReport] = useState(null);
@@ -15,7 +13,7 @@ function PlantIdentification() {
 
   const webcamRef = React.useRef(null);
 
-<<<<<<< HEAD
+
   //Bck Button To Home Page .
   const goBack = () => {
     window.location.href = '/#home'; // Adjust the path if needed for your home section or page
@@ -23,8 +21,6 @@ function PlantIdentification() {
 
 
 
-=======
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
   // Handle image upload from file input
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -57,16 +53,15 @@ function PlantIdentification() {
   };
 
   return (
-    <div className="back-side">
-<<<<<<< HEAD
-      
+   
+<div className="back-side">
       <div className="plant-identification">
-      <button className="back-buttonTwo" onClick={goBack}>← Back to Home</button>
-=======
-      <div className="plant-identification">
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+        <button className="back-buttonThree" onClick={goBack}>
+          ← Back to Home
+        </button>
         <h2>🌿 Plant Identification Service</h2>
         <p>Identify plants around you with just a capture or upload!</p>
+
 
         <div className="buttons-container">
           <label htmlFor="imageUpload" className="identify-button">
@@ -96,11 +91,7 @@ function PlantIdentification() {
               ref={webcamRef}
               screenshotFormat="image/jpeg"
               className="webcam"
-<<<<<<< HEAD
               videoConstraints={{ facingMode: "environment" }} // Use back camera
-=======
-              videoConstraints={{ facingMode: "user" }}
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
             />
             <button className="capture-button" onClick={captureImage}>
               Capture Photo
@@ -115,13 +106,18 @@ function PlantIdentification() {
         {report && (
           <div className="scan-report fade-in">
             <h3>Scan Report</h3>
-            <img src={report.image} alt="Scanned Plant" className="scan-image" />
+            <img
+              src={report.image}
+              alt="Scanned Plant"
+              className="scan-image"
+            />
             <h4>{report.name}</h4>
             <p>{report.description}</p>
           </div>
         )}
       </div>
     </div>
+    
   );
 }
 

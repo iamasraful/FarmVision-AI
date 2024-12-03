@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
 import "./css/AboutUs.css";
-=======
-import "./AboutUs.css";
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
 import SayanImg from "./image/sayanph-modified.png";
 import AsrafulImg from "./image/DSC_8918-photoaidcom-cropped.jpg.png";
 
@@ -67,7 +63,7 @@ const AboutUs = () => {
           </a>
         </div>
       </div>
-<<<<<<< HEAD
+
       {/* About Project Section */}
       <div class="project-about-container">
   <div class="project-about-section">
@@ -106,8 +102,7 @@ const AboutUs = () => {
   </div>
 </div>
 
-=======
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
     </div>
   );
 };

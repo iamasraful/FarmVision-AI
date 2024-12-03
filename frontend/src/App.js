@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import "./css/PlantIdentification.css";
 import "./css/Header.css";
 import "./css/Services.css";
 import "./css/About.css";
@@ -15,23 +15,7 @@ import "./css/SplashScreen.css";
 import "./css/AboutUs.css";
 import "./css/Footer.css"
 import "./css/AdminTwo.css"
-=======
-import "./Header.css";
-import "./Services.css";
-import "./About.css";
-import "./Testimonials.css";
-import "./Contact.css";
-import "./RegisterLogin.css";
-import "./AdminPage.css";
-import "./Review.css";
-import "./SplashScreen.css";
-import "./WeatherDashboard.css";
-import "./Review.css";
-import "./SplashScreen.css";
-import "./AboutUs.css";
-import "./Footer.css"
-import "./AdminTwo.css"
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+import "./css/DiseaseIdentification.css"
 import Header from "./Header.js";
 import Services from "./Services.js";
 import About from "./About.js";

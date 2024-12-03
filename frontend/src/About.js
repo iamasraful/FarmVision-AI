@@ -1,10 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for React Router navigation
-<<<<<<< HEAD
+
 import "./css/About.css";
-=======
-import "./About.css";
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
 import SayanImg from "./image/sayanph-modified.png";
 import AsrafulImg from "./image/DSC_8918-photoaidcom-cropped.jpg.png";
 

@@ -1,9 +1,8 @@
 import React from "react";
-<<<<<<< HEAD
+
 import "./css/Services.css";
-=======
-import "./Services.css";
->>>>>>> 515ec11b07e05ec0e0490fe56655dd0b7113d2dd
+
+
 import { useNavigate } from "react-router-dom";
 function Services() {
   const services = [
