@@ -1,0 +1,501 @@
+/* Page Background */
+.aboutus-page {
+  background: linear-gradient(135deg, #f7f8fa 60%, #e9ecef 40%);
+  font-family: Arial, sans-serif;
+  color: #2c3e50;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Animated Background Overlay */
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(44, 62, 80, 0.1),
+    transparent
+  );
+  animation: moveBackground 18s linear infinite;
+  z-index: -1;
+}
+/* About Content Section */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  padding: 2rem;
+  margin: auto;
+  justify-items: center;
+}
+
+/* Profile Card */
+.profile-card {
+  width: 280px;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  color: #2c3e50;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.profile-card:hover {
+  transform: translateY(-12px) scale(1.05) rotateX(5deg) rotateY(-5deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.profile-card:hover h2 {
+  color: #388e3c;
+  animation: textPop 0.4s ease;
+}
+/* Profile Image with a bounce effect */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: bounce 2s infinite;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Text Styling */
+h2 {
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
+  transition: color 0.3s;
+  position: relative;
+  animation: fadeIn 1.2s;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Social Icons with smooth scaling and color transition */
+.social-icons a {
+  color: #666;
+  font-size: 1.4rem;
+  margin: 0 0.4rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #388e3c;
+  transform: scale(1.2);
+}
+
+/* Button Styling with ripple effect */
+.email-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #388e3c, #388e3c);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+@keyframes textPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.email-button:hover {
+  background: linear-gradient(135deg, #388e3c, #388e3c);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.email-button:active {
+  transform: scale(0.95);
+}
+
+/* About Text Section */
+.about-text {
+  max-width: 700px;
+  margin: 1.5rem auto;
+}
+
+.about-text h1 {
+  font-size: 2.4rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+.about-text p {
+  color: #444;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+/* About Project Section */
+/* Project About Section */
+
+.project-about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.project-about-section {
+  padding: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff 40%, #f7f8fa);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #388e3c;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #4caf50;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+.project-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.services-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.services-list li {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.services-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  color: #388e3c;
+}
+
+.services-list li i {
+  font-size: 1.5rem;
+  color: #388e3c;
+}
+
+/* Footer */
+.project-footer {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #777;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* Project About Section */
+.project-about-section {
+  padding: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff 40%, #f7f8fa);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #388e3c;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #4caf50;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+.project-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.services-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.services-list li {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.services-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  color: #388e3c;
+}
+
+.services-list li i {
+  font-size: 1.5rem;
+  color: #388e3c;
+}
+
+/* Footer */
+.project-footer {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #777;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* PPT Viewer Section */
+.ppt-viewer {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #eef7f9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ppt-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.ppt-download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background: #4caf50;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ppt-download-btn:hover {
+  background: #388e3c;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect for PPT Viewer */
+.ppt-viewer:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+.ppt-title{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #388e3c;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.ppt-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #4caf50;
+  margin: 10px auto 0;
+  border-radius: 2px;}
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  /* Media Query Adjustments for Responsive Layout */
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  .profile-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .project-about-container {
+    grid-template-columns: 1fr;
+  }
+}
+@keyframes textPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes moveBackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(60px, 60px);
+  }
+  100% {
+    transform: translate(-120px, -120px);
+  }
+}

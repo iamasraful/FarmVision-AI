@@ -1,0 +1,198 @@
+/* Set the background gradient for the entire page */
+.back-side {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f5f5f5 50%, #eaeaea 50%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-buttonTwo {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  font-size: 0.9em;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.back-buttonTwo:hover {
+  background-color: #45a049;
+}
+.plant-identification {
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.plant-identification h2 {
+  font-size: 2.5rem;
+  color: #34495e;
+  margin-bottom: 15px;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+.plant-identification p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.identify-button {
+  margin: 10px;
+  padding: 12px 28px;
+  border: none;
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.identify-button:hover {
+  background: linear-gradient(135deg, #76b852, #8dc26f);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Styles for scan report section */
+.loading-spinner {
+  font-size: 1.2rem;
+  color: #0aef06;
+  font-weight: bold;
+  margin-top: 20px;
+}
+/* Scan Report Styling */
+.scan-report {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 2px solid #ddd;
+  border-radius: 10px;
+  background: #ecf0f1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  align-items: start;
+}
+
+.scan-report h3 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-bottom: 15px;
+  margin-bottom: 10px;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.scan-image {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  max-width: 150px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  grid-row: 2 / span 1;
+}
+
+.scan-report h4 {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.scan-report p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  grid-column: 2 / -1;
+  grid-row: 2 / span 1;
+  
+
+}
+.scan-report:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+/*Capture Button */
+.capture-button {
+  margin: 10px;
+  padding: 12px 28px;
+  border: none;
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.capture-button:hover {
+  background: linear-gradient(135deg, #76b852, #8dc26f);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+/* Responsive design */
+@media (max-width: 600px) {
+  .plant-identification {
+    padding: 30px;
+  }
+
+  .plant-identification h2 {
+    font-size: 1.8rem;
+  }
+
+  .identify-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  .back-buttonTwo {
+    align-self: stretch;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+.buttons-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.webcam-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.webcam {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

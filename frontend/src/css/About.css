@@ -1,0 +1,255 @@
+/* About Section */
+.about {
+  max-height: 450px ;
+  display: flex;
+  flex-direction: column; /* Ensure content stacks vertically */
+  align-items: center;
+  justify-content: center; /* Centers content vertically */
+  padding: 20px 20px;
+  background: linear-gradient(145deg, #f7f7f7, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1000px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards, pulse 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+/* About Heading */
+.about h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: slideIn 1s ease 0.5s forwards, glow 1.5s ease-in-out infinite alternate;
+}
+
+.about h2::after {
+  content: "";
+  display: block;
+  width: 50px; /* Keep the width constant */
+  height: 3px;
+  background: #4caf50;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  transform: translateX(-100%); /* Start off-screen */
+  animation: slideInLine 1s ease forwards 1.2s; /* Slide the line in */
+}
+
+/* Keyframes for the heading text */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95); /* Slightly scale down and push down */
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.05); /* Overshoot upwards slightly */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Settle into final position */
+  }
+}
+
+@keyframes slideInLine {
+  0% {
+    transform: translateX(-120%) scaleX(0.8); /* Start further left and slightly compressed */
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(10%) scaleX(1.1); /* Overshoot past the final position */
+  }
+  100% {
+    transform: translateX(0) scaleX(1); /* Settle back to the final position */
+  }
+}
+
+
+
+
+.about:hover {
+  transform: scale(1.02);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #444;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* About Heading */
+.about h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: slideIn 1s ease 0.5s forwards;
+}
+
+/* About Paragraph */
+.about-content p {
+  font-size: 1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Circular Images Section */
+.about-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  opacity: 0;
+  animation: fadeIn 1s ease 1s forwards;
+}
+
+.circle-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.circle-image:hover {
+  transform: scale(1.1) rotateY(10deg);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Read More Button */
+.read-more {
+  margin-top: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.read-more button {
+  margin: 10px;
+  padding: 10px 22px;
+  border: none;
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.read-more button:hover {
+  background: linear-gradient(135deg, #76b852, #8dc26f);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.read-more button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Separator Line */
+.section-separator {
+  border: none;
+  height: 2px;
+  width: 60%;
+  background-color: #ddd;
+  margin: 20px auto;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 40px 15px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about-content {
+    margin-right: 0;
+    padding: 0 10px;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+  }
+
+  .about-images .circle-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.9rem;
+  }
+}
+/*Animation*/
+/* Glowing Effect Keyframes */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #56ab2f, 0 0 10px #56ab2f, 0 0 15px #56ab2f, 0 0 20px #56ab2f;
+  }
+  100% {
+    text-shadow: 0 0 10px #76b852, 0 0 20px #76b852, 0 0 30px #76b852, 0 0 40px #76b852;
+  }
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Pulse Effect Keyframes */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

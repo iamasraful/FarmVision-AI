@@ -1,0 +1,15 @@
+.Text-Three{
+color: white;
+}
+/* Footer responsiveness */
+@media (max-width: 768px) {
+    footer {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    footer {
+      padding: 10px;
+    }
+  }
