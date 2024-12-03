@@ -145,7 +145,7 @@ We welcome contributions to Fram-Vision AI! Here are some ways you can help:
 - **Update 8 (09.11.2024)**: Created and moved all files into `frontend` folder.
 - **Update 9(17.11.2024)** :  Add  Back Buttons On Card Pages . 
 - **Update 10(23.11.2024)** : properly complete The weather Page Or Add The Back Button.
--**Update 11(26.11.2024)** :  Today I Create The  Project About In AboutUs Page.:
--**Update 12(28.11.2024)** :  Today I  Add  Reset Password Button On Login/Register Page .:
+-**Update 11(26.11.2024)** :  Today I Create The  Project About In AboutUs Page.
+-**Update 12(28.11.2024)** :  Today I  Add  Reset Password Button On Login/Register Page.
 
 ---
