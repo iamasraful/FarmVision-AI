@@ -13,9 +13,9 @@ import "./css/WeatherDashboard.css";
 import "./css/Review.css";
 import "./css/SplashScreen.css";
 import "./css/AboutUs.css";
-import "./css/Footer.css"
-import "./css/AdminTwo.css"
-import "./css/DiseaseIdentification.css"
+import "./css/Footer.css";
+import "./css/AdminTwo.css";
+import "./css/DiseaseIdentification.css";
 import Header from "./Header.js";
 import Services from "./Services.js";
 import About from "./About.js";
@@ -40,6 +40,7 @@ import Revew from "./Revew.js";
 import Profile from "./Profile.js";
 import AboutUs from "./AboutUs.js";
 import AdminTwo from "./AdminTwo.js";
+import TestMessage from "./TestMessage.js";
 function App() {
   const [loading, setLoading] = useState(
     !sessionStorage.getItem("splashShown")
@@ -111,6 +112,7 @@ function App() {
           <Route path="/revew-Page" element={<Revew />} />
           <Route path="/profile-detail" element={<Profile />} />
           <Route path="/admin-dashboard" element={<AdminTwo />} />
+          <Route path="/test-message" element={<TestMessage />} />
         </Routes>
 
         <Footer />

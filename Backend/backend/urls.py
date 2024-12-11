@@ -14,9 +14,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.shortcuts import redirect
 from django.contrib import admin
 from django.urls import path
+from agriculture.views import ReactView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+     path('', lambda request: redirect('/api/react/')),
+    path('api/react/', ReactView.as_view(), name="react_view"),  # API endpoint
+    path('admin/', admin.site.urls),  # Admin panel
 ]

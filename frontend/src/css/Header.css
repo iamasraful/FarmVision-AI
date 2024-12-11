@@ -181,8 +181,22 @@ nav {
     font-size: 2em;
   }
 
+  .hamburger.active::after {
+    content: "✖"; /* Cross icon for closing */
+    font-size: 20px;
+    margin-bottom:30px;
+  }
   .hamburger {
     display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 100;
+ 
+    
   }
 
   nav {
@@ -265,8 +279,8 @@ color: #4caf50;
 box-shadow: none ;
 font-size: 20px;
 font-weight: bold;
-margin-bottom: 10px;
-margin-left: 5px;
+margin-bottom: 5px;
+margin-left: 8px;
 
  }
 #navbar li a:hover{

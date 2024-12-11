@@ -105,6 +105,12 @@ function Header() {
                 Profile
               </a>
             </li>
+
+            <li>
+              <a href="#test" onClick={() => navigateTo("/test-message")}>
+                Test
+              </a>
+            </li>
             <li>
               <a href="#Admin-d" onClick={() => navigateTo("/admin-dashboard")}>
 
